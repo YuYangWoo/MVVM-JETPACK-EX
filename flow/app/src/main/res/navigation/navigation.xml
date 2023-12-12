@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainNewsFragment">
+
+    <fragment
+        android:id="@+id/mainNewsFragment"
+        android:name="com.example.flow.ui.view.fragment.MainNewsFragment"
+        android:label="MainNewsFragment" >
+        <action
+            android:id="@+id/action_mainNewsFragment_to_newsInformationFragment"
+            app:destination="@id/newsInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsInformationFragment"
+        android:name="com.example.flow.ui.view.fragment.NewsInformationFragment"
+        android:label="NewsInformationFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.flow.data.model.Article"
+            app:nullable="true" />
+    </fragment>
+</navigation>
